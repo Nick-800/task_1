@@ -1,5 +1,6 @@
 package com.example.task_1
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -19,8 +20,10 @@ class MainActivity : AppCompatActivity() {
             val password = binding.password.text.toString()
             if (username == "user" && password == "pass") {
                 binding.loginResult.text = "Login Successful"
+                binding.root.setBackgroundColor(Color.WHITE)
             } else {
                 binding.loginResult.text = "Login Failed"
+                binding.root.setBackgroundColor(Color.BLACK)
             }
         }
     }
